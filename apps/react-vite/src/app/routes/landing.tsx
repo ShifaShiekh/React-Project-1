@@ -54,7 +54,7 @@ const LandingRoute = () => {
             </div>
             <div className="ml-3 inline-flex">
               <a
-                href="https://github.com/alan2207/bulletproof-react"
+                href="https://github.com/ShifaShiekh/React-Project-1.git"
                 target="_blank"
                 rel="noreferrer"
               >

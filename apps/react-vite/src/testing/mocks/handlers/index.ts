@@ -16,8 +16,17 @@ export const handlers = [
   ...discussionsHandlers,
   ...teamsHandlers,
   ...usersHandlers,
+  
+  // Healthcheck handler
   http.get(`${env.API_URL}/healthcheck`, async () => {
     await networkDelay();
     return HttpResponse.json({ ok: true });
+  }),
+
+  // Account Deletion handler
+  http.delete(`${env.API_URL}/users/me`, async () => {
+    await networkDelay(); // Keeps it feeling realistic
+    console.log('Mock Server: User deleted from temporary memory');
+    return new HttpResponse(null, { status: 204 });
   }),
 ];
